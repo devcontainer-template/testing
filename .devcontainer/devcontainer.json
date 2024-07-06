@@ -1,6 +1,15 @@
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
-    "ghcr.io/devcontainers/features/desktop-lite:1": {}
-  }
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      // Specify the password for desktop connections
+      "password": "yourCustomPassword", // Replace 'yourCustomPassword' with your desired password
+      // Specify the port for the VNC web client
+      "webPort": "6080",
+      // Specify the port for the desktop VNC server
+      "vncPort": "5901"
+    }
+  },
+  // Forward the specified VNC and web ports to the host
+  "forwardPorts": [6080, 5901]
 }
